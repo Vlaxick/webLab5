@@ -36,7 +36,6 @@ th:nth-child(5) {
     background-color: #612626;
 }
 
-/* Перший стовпець */
 td:first-child {
     background-color: #bc5050;
     color: white;
@@ -44,7 +43,6 @@ td:first-child {
     font-weight: bold;
 }
 
-/* Чергування кольорів рядків */
 tr:nth-child(even) td:not(:first-child) {
     background-color: #e5bcbc;
 }
@@ -53,7 +51,6 @@ tr:nth-child(odd) td:not(:first-child) {
     background-color: #f0dada;
 }
 
-/* Оформлення плюсів та мінусів */
 td:not(:first-child) {
     font-size: 24px;
     color: #654747;

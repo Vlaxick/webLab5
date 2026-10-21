@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 3 — Анкета</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1 align="center">Анкета користувача</h1>
+
+  <form method="get">
+
+    <fieldset>
+      <legend>Особиста інформація</legend>
+
+      <p>
+        <label for="name">Ім'я та прізвище:</label><br>
+        <input type="text" id="name" name="name"
+               placeholder="Введіть ім'я та прізвище"
+               size="45" required tabindex="1">
+      </p>
+
+      <p>
+        <label for="birthdate">Дата народження:</label><br>
+        <input type="date" id="birthdate" name="birthdate" tabindex="2">
+      </p>
+
+      <p>
+        <label for="city">Місто:</label><br>
+        <input type="text" id="city" name="city" list="cities"
+               placeholder="Оберіть або введіть місто"
+               size="45" tabindex="3">
+
+        <datalist id="cities">
+          <option value="Чернівці">
+          <option value="Київ">
+          <option value="Львів">
+          <option value="Одеса">
+          <option value="Тернопіль">
+        </datalist>
+      </p>
+
+      <p>
+        <label for="about">Коротко про себе:</label><br>
+        <textarea id="about" name="about" rows="4" cols="45"
+                  placeholder="Розкажіть про себе"
+                  tabindex="4"></textarea>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Контактні дані</legend>
+
+      <p>
+        <label for="email">Електронна пошта:</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="example@gmail.com" size="45"
+               autocomplete="off"
+               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+               required tabindex="5">
+      </p>
+
+      <p>
+        <label for="phone">Телефон:</label><br>
+        <input type="tel" id="phone" name="phone"
+               placeholder="+380991234567" size="45"
+               pattern="\+380[0-9]{9}"
+               title="Формат: +380XXXXXXXXX"
+               required tabindex="6">
+      </p>
+
+      <p>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"
+               placeholder="Рівно 6 символів" size="45"
+               pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9]{6}"
+               title="6 символів: велика літера, мала літера та цифра"
+               required tabindex="7">
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Інформація про навчання</legend>
+
+      <p>Форма навчання:</p>
+
+      <input type="radio" id="day" name="study" value="day" checked tabindex="8">
+      <label for="day">Денна</label>
+
+      <input type="radio" id="distance" name="study" value="distance">
+      <label for="distance">Дистанційна</label>
+
+      <input type="radio" id="parttime" name="study" value="parttime">
+      <label for="parttime">Заочна</label>
+
+      <p>Рівень знань HTML:</p>
+
+      <input type="radio" id="low" name="level" value="low">
+      <label for="low">Початковий</label>
+
+      <input type="radio" id="middle" name="level" value="middle" checked>
+      <label for="middle">Середній</label>
+
+      <input type="radio" id="high" name="level" value="high">
+      <label for="high">Високий</label>
+
+      <p>
+        <label for="course">Курс навчання:</label><br>
+        <select id="course" name="course" tabindex="9">
+          <option value="1">1 курс</option>
+          <option value="2" selected>2 курс</option>
+          <option value="3">3 курс</option>
+          <option value="4">4 курс</option>
+          <option value="5">Магістратура</option>
+        </select>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Навички та інтереси</legend>
+
+      <p>Які технології вас цікавлять?</p>
+
+      <input type="checkbox" id="web" name="web" value="web" tabindex="10">
+      <label for="web">Web</label>
+
+      <input type="checkbox" id="java" name="java" value="java">
+      <label for="java">Java</label>
+
+      <input type="checkbox" id="python" name="python" value="python">
+      <label for="python">Python</label>
+
+      <input type="checkbox" id="database" name="database" value="database">
+      <label for="database">Бази даних</label>
+
+      <p>
+        <label for="languages">Мови програмування:</label><br>
+        <select id="languages" name="languages" multiple size="5" tabindex="11">
+          <option value="java">Java</option>
+          <option value="python">Python</option>
+          <option value="javascript">JavaScript</option>
+          <option value="cpp">C++</option>
+          <option value="csharp">C#</option>
+          <option value="php">PHP</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="technology">Напрям технологій:</label><br>
+        <select id="technology" name="technology" tabindex="12">
+
+          <optgroup label="Frontend">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+          </optgroup>
+
+          <optgroup label="Backend">
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+          </optgroup>
+
+          <optgroup label="Бази даних">
+            <option value="mysql">MySQL</option>
+            <option value="mongodb">MongoDB</option>
+          </optgroup>
+
+          <optgroup label="Операційні системи">
+            <option value="linux">Linux</option>
+            <option value="windows">Windows</option>
+          </optgroup>
+
+        </select>
+      </p>
+    </fieldset>
+
+    <p align="center">
+      <button type="submit" name="send" value="get" tabindex="13">
+        Надіслати
+      </button>
+
+      <button type="reset" tabindex="14">
+        Очистити
+      </button>
+    </p>
+
+  </form>
+
+  <form method="post" enctype="multipart/form-data">
+
+    <fieldset>
+      <legend>Завантаження аудіо</legend>
+
+      <label for="audio">Оберіть аудіофайли:</label><br><br>
+
+      <input type="file" id="audio" name="audio"
+             accept="audio/*" multiple required tabindex="15">
+
+      <p>
+        <button type="submit" name="upload" value="post" tabindex="16">
+          Завантажити
+        </button>
+      </p>
+    </fieldset>
+
+  </form>
+
+  <p align="center">
+    <a href="../index.html">Повернутись на головну</a>
+  </p>
+
+</div>
+
+</body>
+</html>
